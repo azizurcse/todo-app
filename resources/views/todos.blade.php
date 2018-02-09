@@ -15,6 +15,11 @@
 
     {{$todo->todo}} <a href="{{route('todo.delete',['id'=>$todo->id])}}" class="btn btn-danger">X</a>
     <a href="{{route('todo.update',['id'=>$todo->id])}}" class="btn btn-info">Update</a>
+    @if(!$todo->completed)
+    <a href="{{route('todos.completed',['id'=>$todo->id])}}" class="btn btn-success">Mark as completed</a>
+    @else
+        <span class="text-success">Completed</span>
+    @endif
     <hr>
 
 @endforeach
