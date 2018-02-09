@@ -23,5 +23,5 @@
     <hr>
 
 @endforeach
-
+{{ $todos->links() }}
 @stop
